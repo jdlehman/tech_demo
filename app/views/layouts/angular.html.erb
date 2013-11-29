@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angular</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'angular' %>
+  <%= yield :header %>
+</head>
+<body>
+
+<%= yield %>
+
+  <div id="footer">
+    <%= javascript_include_tag 'angular' %>
+    <%= yield :footer %>
+  </div>
+</body>
+</html>
