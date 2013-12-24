@@ -1,0 +1,19 @@
+<div ng-app="toDoApp">
+  <div ng-controller="ToDoCtrl">
+    <h1>To Do List</h1>
+    <ul ng-repeat="todo in todos">
+      <div to-do-item todo="todo" class="done-{{todo.done}}"></div>
+    </ul>
+    <form ng-submit="addToDo()">
+      <input type="text" ng-model="newToDo" placeholder="Name">
+      <input type="text" ng-model="newAbout" placeholder="Description">
+      <input type="submit" value="Add">
+    </form>
+    <button ng-click="clearDone()">Archive</button>
+
+    <h1>Completed</h1>
+    <ul ng-repeat="todo in doneToDos">
+      <li>{{todo.name}}</li>
+    </ul>
+  </div>
+</div>

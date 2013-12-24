@@ -1,5 +1,5 @@
 class AngularController < ActionController::Base
 
-  def demo
+  def todo
   end
 end
