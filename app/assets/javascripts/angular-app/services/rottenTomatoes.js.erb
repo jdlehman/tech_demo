@@ -1,0 +1,19 @@
+movieApp.factory('rottenTomatoes', ['$http', function($http) {
+  var rottenTomatoURL = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json';
+  var apiKey = '<%= ROTTEN_TOMATOES['api_key'] %>';
+
+  var searchMovieByTitle = function(movie) {
+    return $http({
+      method: 'JSONP',
+      url: rottenTomatoURL + '?apikey=' + apiKey + '&q=' + movie
+          + '&callback=JSON_CALLBACK'
+    });
+  };
+
+  return {
+    byTitle: function(movie) {
+      return searchMovieByTitle(movie);
+    }
+  };
+
+}]);

@@ -1,0 +1,19 @@
+<div ng-app="movieApp" id="movieApp">
+  <div ng-controller="MovieCtrl">
+    <h1>RottenTomatoes Movie Database</h1>
+    <form>
+      <label>Search by Title:</label>
+      <input ng-model="movieName" placeholder="ex. Toy Story">
+      <input type="submit" ng-click="findMovie()">
+    </form>
+    <div ng-repeat="movie in movies">
+      <div movie-card 
+        title="{{movie.title}}"
+        year="{{movie.year}}"
+        ratings="movie.ratings"
+        image="{{movie.posters.profile}}"
+        link="{{movie.links.alternate}}">
+    </div>
+    </div>
+  </div>
+</div>
