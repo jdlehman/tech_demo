@@ -1,6 +1,6 @@
 movieApp.filter('ratingScore', [function() {
   return function(rating) {
-    if(rating < 0) {
+    if(rating <= 0) {
       return 'N/A';
     }
     else {
