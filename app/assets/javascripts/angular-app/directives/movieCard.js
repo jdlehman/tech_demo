@@ -13,7 +13,7 @@ template: '<div class="movieCard">' +
               '<div class="content">' +
                 '<h2>{{title | trimTitle}}</h2>' +
                 '<h3>{{year || "Unknown"}}</h3>' +
-                '<image src="{{image}}">' +
+                '<image ng-src="{{image}}">' +
                 '<div><strong>Critic:</strong> {{ratings.critics_score | ratingScore}}</div>' +
                 '<div><strong>Audience:</strong> {{ratings.audience_score | ratingScore}}</div>' +
               '</div>' +
